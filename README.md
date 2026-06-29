@@ -106,6 +106,18 @@ npm run build
 
 ---
 
+## 😂 开发者梗
+
+| 梗 | 翻译 |
+|---|---|
+| It works on my machine 🤷 | 在我电脑上能跑，你的不行别怪我 |
+| LGTM 👍 | Looks Good To Me — 看着还行，合了吧 |
+| This is fine 🔥🐶 | 代码烧起来了，但问题不大 |
+| Deploy on Friday 😈 | 周五上线，周末加班预备 |
+| Star this repo ⭐ | 求求了点个 Star 吧 |
+
+---
+
 ## 📝 License
 
 MIT © [xxyccc](https://github.com/xxyccc)
@@ -113,5 +125,5 @@ MIT © [xxyccc](https://github.com/xxyccc)
 ---
 
 <p align="center">
-  <sub>Made with 💖 and ☕</sub>
+  <sub>Made with 💖 and ☕ | 为爱发电 ⚡ | Works on my machine 🤷</sub>
 </p>
