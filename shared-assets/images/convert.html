@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>图标转换</title></head><body>
+  <canvas id="c" width="256" height="256" style="display:none"></canvas>
+  <img id="svg" src="icon.svg" style="display:none" onload="convert()">
+  <script>
+    function convert() {
+      const canvas = document.getElementById('c');
+      const ctx = canvas.getContext('2d');
+      const img = document.getElementById('svg');
+      ctx.drawImage(img, 0, 0, 256, 256);
+      // 下载 PNG
+      const link = document.createElement('a');
+      link.download = 'icon.png';
+      link.href = canvas.toDataURL('image/png');
+      document.body.innerHTML = '<div style="text-align:center;font-family:sans-serif;padding:60px;"><h2>✅ 图标已生成</h2><p>PNG 文件应该正在下载...</p><p style="color:#999;">如果没有自动下载，<a href="' + link.href + '" download="icon.png">点这里</a></p></div>';
+      link.click();
+    }
+  </script>
+</body></html>

@@ -14,3 +14,7 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# 打包产物（不提交到 git）
+*.zip
+*.exe

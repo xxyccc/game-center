@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>生成图标</title></head>
+<body style="font-family:'Microsoft YaHei',sans-serif;text-align:center;padding:60px;background:#FFF5F5;">
+  <h2>🐱 生成猫猫图标</h2>
+  <canvas id="c" width="256" height="256"></canvas>
+  <p><button id="btn" style="padding:12px 32px;font-size:16px;border-radius:12px;border:none;background:#FF6B8A;color:white;cursor:pointer;font-family:inherit;">📥 下载 PNG 图标</button></p>
+  <script>
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+
+    // 背景圆
+    const bgGrad = ctx.createRadialGradient(128, 115, 10, 128, 128, 122);
+    bgGrad.addColorStop(0, '#FFF5F5');
+    bgGrad.addColorStop(1, '#FFE0E8');
+    ctx.fillStyle = bgGrad;
+    ctx.beginPath(); ctx.arc(128, 128, 122, 0, Math.PI*2); ctx.fill();
+    ctx.strokeStyle = '#F8C8D8'; ctx.lineWidth = 3; ctx.stroke();
+
+    // 左耳
+    ctx.fillStyle = '#FFF0F3'; ctx.strokeStyle = '#F0C0D0'; ctx.lineWidth = 2.5; ctx.lineJoin = 'round';
+    ctx.beginPath(); ctx.moveTo(45,58); ctx.lineTo(20,10); ctx.lineTo(78,38); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#FFCDD2';
+    ctx.beginPath(); ctx.moveTo(48,52); ctx.lineTo(30,20); ctx.lineTo(72,40); ctx.closePath(); ctx.fill();
+
+    // 右耳
+    ctx.fillStyle = '#FFF0F3';
+    ctx.beginPath(); ctx.moveTo(211,58); ctx.lineTo(236,10); ctx.lineTo(178,38); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#FFCDD2';
+    ctx.beginPath(); ctx.moveTo(208,52); ctx.lineTo(226,20); ctx.lineTo(184,40); ctx.closePath(); ctx.fill();
+
+    // 脸
+    ctx.fillStyle = '#FFF5F5'; ctx.strokeStyle = '#F0C0D0'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.ellipse(128, 140, 72, 64, 0, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+
+    // 左眼（蓝）
+    ctx.fillStyle = 'white'; ctx.strokeStyle = '#C8D8F0'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.ellipse(100, 128, 16, 18, 0, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#5C9CE6';
+    ctx.beginPath(); ctx.ellipse(102, 129, 10, 12, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = '#1A237E';
+    ctx.beginPath(); ctx.ellipse(104, 126, 5, 5.5, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = 'white';
+    ctx.beginPath(); ctx.arc(106, 123, 2.5, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(100, 131, 1, 0, Math.PI*2); ctx.fill();
+
+    // 右眼（金）
+    ctx.fillStyle = 'white'; ctx.strokeStyle = '#D8D0C8'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.ellipse(154, 128, 16, 18, 0, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#F4B830';
+    ctx.beginPath(); ctx.ellipse(152, 129, 10, 12, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = '#8B6100';
+    ctx.beginPath(); ctx.ellipse(150, 126, 5, 5.5, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = 'white';
+    ctx.beginPath(); ctx.arc(148, 123, 2.5, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(154, 131, 1, 0, Math.PI*2); ctx.fill();
+
+    // 眉毛
+    ctx.strokeStyle = '#D0B0B8'; ctx.lineWidth = 2; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(82,110); ctx.quadraticCurveTo(92,99,100,110); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(156,110); ctx.quadraticCurveTo(164,99,172,110); ctx.stroke();
+
+    // 鼻子
+    ctx.fillStyle = '#FF8A9E';
+    ctx.beginPath(); ctx.ellipse(128, 148, 5, 3.5, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.6)';
+    ctx.beginPath(); ctx.ellipse(127, 147, 1.5, 1, 0, 0, Math.PI*2); ctx.fill();
+
+    // 嘴
+    ctx.strokeStyle = '#D090A0'; ctx.lineWidth = 1.8; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.beginPath(); ctx.moveTo(120,153); ctx.quadraticCurveTo(124,158,128,153); ctx.quadraticCurveTo(132,158,136,153); ctx.stroke();
+
+    // 胡须
+    ctx.strokeStyle = '#E0C0C8'; ctx.lineWidth = 1.2;
+    ctx.beginPath(); ctx.moveTo(60,138); ctx.lineTo(92,144); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(58,150); ctx.lineTo(90,150); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(164,144); ctx.lineTo(196,138); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(166,150); ctx.lineTo(198,150); ctx.stroke();
+
+    // 脸颊
+    const cheekGrad = ctx.createRadialGradient(88,152,2,88,152,14);
+    cheekGrad.addColorStop(0, '#FFB8C6'); cheekGrad.addColorStop(1, 'rgba(255,214,224,0)');
+    ctx.fillStyle = cheekGrad; ctx.globalAlpha = 0.6;
+    ctx.beginPath(); ctx.ellipse(88, 152, 14, 8, 0, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(168, 152, 14, 8, 0, 0, Math.PI*2); ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // 铃铛项圈
+    ctx.strokeStyle = '#FF6B8A'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(68,174); ctx.quadraticCurveTo(128,192,188,174); ctx.stroke();
+    ctx.fillStyle = '#FFD740';
+    ctx.beginPath(); ctx.arc(128, 182, 7, 0, Math.PI*2); ctx.fill();
+    ctx.strokeStyle = '#F5A000'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(128, 182, 7, 0, Math.PI*2); ctx.stroke();
+    ctx.fillStyle = 'rgba(255,255,255,0.5)';
+    ctx.beginPath(); ctx.arc(126, 180, 1.5, 0, Math.PI*2); ctx.fill();
+
+    // 小爪子
+    ctx.fillStyle = '#FFF5F5'; ctx.strokeStyle = '#F0D0D8'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.ellipse(88, 200, 16, 10, 0, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(168, 200, 16, 10, 0, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+
+    // 下载按钮
+    document.getElementById('btn').addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.download = 'icon.png';
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    });
+  </script>
+</body></html>

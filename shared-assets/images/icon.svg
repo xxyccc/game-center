@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#FFF5F5"/>
+      <stop offset="100%" stop-color="#FFE0E8"/>
+    </radialGradient>
+    <radialGradient id="cheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB8C6"/>
+      <stop offset="100%" stop-color="#FFD6E0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 圆形背景 -->
+  <circle cx="128" cy="128" r="122" fill="url(#bg)" stroke="#F8C8D8" stroke-width="3"/>
+  <!-- 耳朵 -->
+  <!-- 左耳 -->
+  <polygon points="45,58 20,10 78,38" fill="#FFF0F3" stroke="#F0C0D0" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="48,52 30,20 72,40" fill="#FFCDD2"/>
+  <!-- 右耳 -->
+  <polygon points="211,58 236,10 178,38" fill="#FFF0F3" stroke="#F0C0D0" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="208,52 226,20 184,40" fill="#FFCDD2"/>
+
+  <!-- 脸（主体） -->
+  <ellipse cx="128" cy="140" rx="72" ry="64" fill="#FFF5F5" stroke="#F0C0D0" stroke-width="2.5"/>
+
+  <!-- 眼睛 -->
+  <!-- 左眼（蓝色） -->
+  <ellipse cx="102" cy="128" rx="16" ry="18" fill="white" stroke="#C8D8F0" stroke-width="1.5"/>
+  <ellipse cx="104" cy="129" rx="10" ry="12" fill="#5C9CE6"/>
+  <ellipse cx="106" cy="126" rx="5" ry="5.5" fill="#1A237E"/>
+  <circle cx="108" cy="123" r="2.5" fill="white"/>
+  <circle cx="102" cy="131" r="1" fill="white"/>
+
+  <!-- 右眼（金色） -->
+  <ellipse cx="154" cy="128" rx="16" ry="18" fill="white" stroke="#D8D0C8" stroke-width="1.5"/>
+  <ellipse cx="152" cy="129" rx="10" ry="12" fill="#F4B830"/>
+  <ellipse cx="150" cy="126" rx="5" ry="5.5" fill="#8B6100"/>
+  <circle cx="148" cy="123" r="2.5" fill="white"/>
+  <circle cx="154" cy="131" r="1" fill="white"/>
+
+  <!-- 眉毛（俏皮） -->
+  <path d="M84,110 Q92,102 100,110" fill="none" stroke="#D0B0B8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M156,110 Q164,102 172,110" fill="none" stroke="#D0B0B8" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- 小鼻子 -->
+  <ellipse cx="128" cy="148" rx="5" ry="3.5" fill="#FF8A9E"/>
+  <!-- 鼻子高光 -->
+  <ellipse cx="127" cy="147" rx="1.5" ry="1" fill="white" opacity="0.6"/>
+
+  <!-- 嘴巴（W型） -->
+  <path d="M120,153 Q124,158 128,153 Q132,158 136,153" fill="none" stroke="#D090A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 胡须 -->
+  <line x1="60" y1="138" x2="92" y2="144" stroke="#E0C0C8" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="58" y1="150" x2="90" y2="150" stroke="#E0C0C8" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="164" y1="144" x2="196" y2="138" stroke="#E0C0C8" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="166" y1="150" x2="198" y2="150" stroke="#E0C0C8" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- 脸颊红晕 -->
+  <ellipse cx="88" cy="152" rx="12" ry="7" fill="url(#cheek)" opacity="0.6"/>
+  <ellipse cx="168" cy="152" rx="12" ry="7" fill="url(#cheek)" opacity="0.6"/>
+
+  <!-- 铃铛项圈 -->
+  <path d="M70,174 Q128,188 186,174" fill="none" stroke="#FF6B8A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="128" cy="182" r="7" fill="#FFD740" stroke="#F5A000" stroke-width="1.5"/>
+  <circle cx="126" cy="180" r="1.5" fill="white" opacity="0.5"/>
+
+  <!-- 小爪子 -->
+  <ellipse cx="88" cy="200" rx="16" ry="10" fill="#FFF5F5" stroke="#F0D0D8" stroke-width="2"/>
+  <ellipse cx="168" cy="200" rx="16" ry="10" fill="#FFF5F5" stroke="#F0D0D8" stroke-width="2"/>
+</svg>

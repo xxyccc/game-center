@@ -30,7 +30,7 @@ function createMainWindow() {
     minWidth: 800,         // 最小宽度
     minHeight: 600,        // 最小高度
     title: '🎮 游戏乐园',
-    icon: path.join(__dirname, 'shared-assets', 'images', 'icon.png'),
+    icon: path.join(__dirname, 'shared-assets', 'images', 'icon.ico'),
     // 网页渲染设置，让 Canvas 画游戏更流畅
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),  // 安全的中间桥梁
