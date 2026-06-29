@@ -1,0 +1,35 @@
+{
+  "name": "game-center",
+  "version": "1.0.0",
+  "description": "🎮 游戏乐园 - 可爱桌面游戏集合 | Game Launcher with Cute Mini Games",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "author": "xxyccc",
+  "license": "MIT",
+  "keywords": [
+    "games",
+    "electron",
+    "casual-games"
+  ],
+  "devDependencies": {
+    "electron": "^42.5.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.xxyccc.game-center",
+    "productName": "游戏乐园",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "shared-assets/images/icon.png"
+    },
+    "portable": {
+      "artifactName": "游戏乐园.exe"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+/**
+ * game-base.css — 所有游戏页面共享的基础样式
+ *
+ * 每个游戏页面都引入这个文件，保证风格统一
+ * 设计：可爱的扁平矢量风，柔色背景，圆角按钮
+ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 40%, #e8eaf6 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+/* ===== 游戏页面顶部栏 ===== */
+.game-header {
+  width: 100%;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.btn-back {
+  padding: 6px 16px;
+  border-radius: 16px;
+  border: 2px solid #e0e0e0;
+  background: rgba(255,255,255,0.85);
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  backdrop-filter: blur(6px);
+}
+
+.btn-back:hover {
+  border-color: #7c4dff;
+  color: #7c4dff;
+  background: rgba(255,255,255,0.95);
+  transform: translateY(-1px);
+}
+
+.game-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+}
+
+.game-score-display {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e91e63;
+  background: rgba(255,255,255,0.85);
+  padding: 4px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* ===== 游戏容器（画布放在这里面） ===== */
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 46px;  /* 给顶部栏留空间 */
+}
+
+canvas {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  background: white;
+}
+
+/* ===== 底部提示 ===== */
+.game-hint {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #bbb;
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+{
+  "id": "snake",
+  "name": "贪吃蛇",
+  "icon": "🐍",
+  "description": "控制小蛇吃掉食物，不断变长！别撞到自己哦～",
+  "tags": ["经典", "休闲", "闯关"],
+  "version": "1.0.0",
+  "mainFile": "index.html"
+}

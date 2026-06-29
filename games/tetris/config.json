@@ -1,0 +1,9 @@
+{
+  "id": "tetris",
+  "name": "俄罗斯方块",
+  "icon": "🧱",
+  "description": "旋转、移动、消除！填满一行就能得分～",
+  "tags": ["经典", "益智", "消除"],
+  "version": "1.0.0",
+  "mainFile": "index.html"
+}

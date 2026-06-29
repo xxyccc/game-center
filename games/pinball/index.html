@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🪐 弹球消消乐</title>
+  <link rel="stylesheet" href="../../shared-assets/game-base.css">
+</head>
+<body>
+  <div class="game-header">
+    <button class="btn-back" onclick="goBack()">← 返回大厅</button>
+    <span class="game-title">🪐 弹球消消乐</span>
+    <span class="game-score-display">⭐ <span id="score">0</span></span>
+  </div>
+
+  <div class="game-container">
+    <canvas id="gameCanvas" width="480" height="600"></canvas>
+  </div>
+
+  <div class="game-hint">鼠标左右移动控制弹板 | 点击发射小球 | 消除所有砖块过关</div>
+
+  <script src="game.js"></script>
+</body>
+</html>

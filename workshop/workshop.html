@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎨 创作工坊</title>
+  <link rel="stylesheet" href="workshop.css">
+</head>
+<body>
+  <!-- 顶部栏 -->
+  <header class="ws-header">
+    <button class="btn-back" onclick="goBack()">← 返回大厅</button>
+    <h1>🎨 创作工坊</h1>
+    <span class="ws-subtitle">— 制作你自己的游戏 —</span>
+  </header>
+
+  <div class="ws-layout">
+    <!-- 左侧：功能菜单 -->
+    <nav class="ws-sidebar">
+      <button class="ws-nav-btn active" data-panel="templates">🎮 游戏模板</button>
+      <button class="ws-nav-btn" data-panel="assets">🖼️ 素材库</button>
+      <button class="ws-nav-btn" data-panel="import">📥 导入素材</button>
+      <button class="ws-nav-btn" data-panel="customize">⚙️ 自定义游戏</button>
+    </nav>
+
+    <!-- 右侧：内容面板 -->
+    <main class="ws-content">
+
+      <!-- 面板1：游戏模板 -->
+      <div class="ws-panel active" id="panel-templates">
+        <h2>选择游戏模板</h2>
+        <p class="ws-desc">选一个模板，然后用素材库的图片替换默认素材，再调整参数——你的游戏就出炉啦！</p>
+        <div class="template-grid" id="templateGrid">
+          <!-- JS 动态生成 -->
+        </div>
+      </div>
+
+      <!-- 面板2：素材库 -->
+      <div class="ws-panel" id="panel-assets">
+        <h2>素材库</h2>
+        <p class="ws-desc">所有游戏共享的素材都在这里，拖拽到自定义面板使用</p>
+        <div class="asset-tags" id="assetTags"></div>
+        <div class="asset-grid" id="assetGrid">
+          <div class="asset-empty">暂无素材，去"导入素材"添加一些吧 ✨</div>
+        </div>
+      </div>
+
+      <!-- 面板3：导入素材 -->
+      <div class="ws-panel" id="panel-import">
+        <h2>导入你的素材</h2>
+        <p class="ws-desc">选择图片文件，它们会被添加到素材库中</p>
+        <div class="import-zone" id="importZone">
+          <span style="font-size:40px;">📤</span>
+          <p>点击选择文件或拖拽到这里</p>
+          <input type="file" id="fileInput" accept="image/*" multiple hidden>
+        </div>
+        <div class="import-preview" id="importPreview"></div>
+      </div>
+
+      <!-- 面板4：自定义游戏 -->
+      <div class="ws-panel" id="panel-customize">
+        <h2>自定义游戏参数</h2>
+        <p class="ws-desc">选择一个模板，然后调整以下参数来创建你的专属游戏</p>
+        <form class="customize-form" id="customizeForm">
+          <label>游戏名称</label>
+          <input type="text" id="custName" placeholder="我的自定义游戏" value="我的游戏">
+
+          <label>游戏图标</label>
+          <input type="text" id="custIcon" placeholder="🎮" value="🎮">
+
+          <label>游戏描述</label>
+          <input type="text" id="custDesc" placeholder="一款有趣的游戏" value="一款自定义游戏">
+
+          <label>模板类型</label>
+          <select id="custTemplate">
+            <option value="snake">🐍 贪吃蛇型</option>
+            <option value="breakout">🪐 弹球型</option>
+            <option value="match">🐑 消除型</option>
+          </select>
+
+          <label>游戏速度 <span id="speedVal">中等</span></label>
+          <input type="range" id="custSpeed" min="1" max="5" value="3">
+
+          <label>难度等级</label>
+          <select id="custDifficulty">
+            <option value="easy">😊 简单</option>
+            <option value="normal" selected>🙂 普通</option>
+            <option value="hard">😈 困难</option>
+          </select>
+
+          <button type="button" class="btn-create" id="btnCreateGame">✨ 创建游戏</button>
+        </form>
+        <div class="create-result" id="createResult"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="workshop.js"></script>
+</body>
+</html>

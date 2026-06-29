@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎮 游戏乐园</title>
+  <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+  <!-- 顶部标题栏 -->
+  <header class="header">
+    <div class="header-content">
+      <span class="logo">🎮</span>
+      <h1>游戏乐园</h1>
+      <span class="subtitle">— 可爱休闲游戏集合 —</span>
+    </div>
+  </header>
+
+  <!-- 中间游戏卡片区域 -->
+  <main class="main-content">
+    <div class="games-grid" id="gamesGrid">
+      <!-- 游戏卡片由 JavaScript 动态生成 -->
+      <div class="loading-hint">正在加载游戏...</div>
+    </div>
+  </main>
+
+  <!-- 底部工具栏 -->
+  <footer class="footer">
+    <button class="footer-btn" id="btnWorkshop" title="打开创作工坊，制作自己的游戏">
+      🎨 创作工坊
+    </button>
+    <span class="footer-info">v1.0.0 · 6 款游戏 · 持续更新中 ✨</span>
+  </footer>
+
+  <script src="lobby.js"></script>
+</body>
+</html>

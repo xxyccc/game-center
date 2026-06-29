@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐍 贪吃蛇</title>
+  <link rel="stylesheet" href="../../shared-assets/game-base.css">
+</head>
+<body>
+  <!-- 顶部栏：返回按钮 + 游戏名 + 分数 -->
+  <div class="game-header">
+    <button class="btn-back" onclick="goBack()">← 返回大厅</button>
+    <span class="game-title">🐍 贪吃蛇</span>
+    <span class="game-score-display">🍎 <span id="score">0</span></span>
+  </div>
+
+  <!-- 游戏画面 -->
+  <div class="game-container">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+  </div>
+
+  <div class="game-hint">方向键 ↑↓←→ 或 WASD 控制移动 | 空格键暂停</div>
+
+  <script src="game.js"></script>
+</body>
+</html>

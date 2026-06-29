@@ -1,0 +1,9 @@
+{
+  "id": "pinball",
+  "name": "弹球消消乐",
+  "icon": "🪐",
+  "description": "发射小球，撞击砖块！用弹板接住弹回的小球～",
+  "tags": ["弹球", "休闲", "闯关"],
+  "version": "1.0.0",
+  "mainFile": "index.html"
+}

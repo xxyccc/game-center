@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐑 羊了个羊</title>
+  <link rel="stylesheet" href="../../shared-assets/game-base.css">
+</head>
+<body>
+  <div class="game-header">
+    <button class="btn-back" onclick="goBack()">← 返回大厅</button>
+    <span class="game-title">🐑 羊了个羊</span>
+    <span class="game-score-display">✅ <span id="score">0</span></span>
+  </div>
+
+  <div class="game-container" style="flex-direction:column; gap:10px;">
+    <canvas id="gameCanvas" width="420" height="400"></canvas>
+    <!-- 暂存栏（7 个槽位） -->
+    <div id="holderBar" style="display:flex;gap:6px;background:rgba(255,255,255,0.7);padding:8px 16px;border-radius:20px;min-height:50px;align-items:center;"></div>
+  </div>
+
+  <div class="game-hint">点击卡片 → 移到下方暂存栏 | 3 张相同自动消除 | 暂存栏满了就输了哦</div>
+
+  <script src="game.js"></script>
+</body>
+</html>

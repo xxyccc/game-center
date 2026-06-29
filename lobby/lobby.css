@@ -1,0 +1,210 @@
+/**
+ * lobby.css — 游戏大厅样式
+ *
+ * 设计理念：扁平矢量风 + 可爱柔色
+ * - 柔和粉色渐变背景
+ * - 白色圆角卡片 + 彩色边框
+ * - 大圆角、柔阴影
+ * - 悬停时卡片会微微浮起
+ */
+
+/* ========== 基础设置 ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 30%, #e8eaf6 60%, #e0f7fa 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* 禁止选中文字（游戏大厅不需要选文字） */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ========== 顶部标题栏 ========== */
+.header {
+  padding: 24px 0 8px 0;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 36px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* logo 小弹跳动画，让页面活起来 */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #e91e63, #7c4dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #999;
+  letter-spacing: 2px;
+}
+
+/* ========== 游戏卡片网格 ========== */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 列 */
+  gap: 20px;
+  max-width: 780px;
+  width: 100%;
+}
+
+.loading-hint {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #bbb;
+  font-size: 16px;
+  padding: 60px 0;
+}
+
+/* ========== 单个游戏卡片 ========== */
+.game-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 16px 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  /* 卡片阴影：柔和的投影 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  /* 过渡动画：悬停时平滑变化 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 卡片顶部彩色装饰条 */
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  border-radius: 0 0 4px 4px;
+  /* 颜色由 JS 动态设置 */
+  background: var(--card-color, #ff6b6b);
+}
+
+/* 悬停效果：卡片浮起 */
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1), 0 3px 8px rgba(0,0,0,0.06);
+}
+
+/* 点击效果：卡片缩小 */
+.game-card:active {
+  transform: translateY(-2px) scale(0.98);
+  transition: transform 0.05s ease;
+}
+
+/* 游戏图标（大 emoji 或图片） */
+.game-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* 游戏名字 */
+.game-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* 游戏简介 */
+.game-desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.4;
+}
+
+/* 标签 */
+.game-tags {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.game-tag {
+  font-size: 10px;
+  background: #f5f5f5;
+  color: #aaa;
+  padding: 2px 8px;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.game-card:hover .game-tag {
+  background: #ffe0e0;
+  color: #e91e63;
+}
+
+/* ========== 底部工具栏 ========== */
+.footer {
+  padding: 12px 32px 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.footer-btn:hover {
+  border-color: #7c4dff;
+  color: #7c4dff;
+  background: #f8f5ff;
+  transform: translateY(-1px);
+}
+
+.footer-info {
+  font-size: 11px;
+  color: #ccc;
+}

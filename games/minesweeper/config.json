@@ -1,0 +1,9 @@
+{
+  "id": "minesweeper",
+  "name": "扫雷",
+  "icon": "💣",
+  "description": "翻开格子找地雷，用数字推理安全区域！",
+  "tags": ["经典", "益智", "推理"],
+  "version": "1.0.0",
+  "mainFile": "index.html"
+}

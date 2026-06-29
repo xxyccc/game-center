@@ -1,0 +1,266 @@
+/**
+ * workshop.css — 创作工坊样式
+ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 40%, #e8eaf6 100%);
+  min-height: 100vh;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ===== 顶部栏 ===== */
+.ws-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 12px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.btn-back {
+  padding: 6px 16px;
+  border-radius: 16px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.btn-back:hover { border-color: #7c4dff; color: #7c4dff; }
+
+.ws-header h1 { font-size: 20px; color: #444; }
+
+.ws-subtitle { font-size: 12px; color: #aaa; }
+
+/* ===== 布局 ===== */
+.ws-layout {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+/* ===== 左侧导航 ===== */
+.ws-sidebar {
+  width: 160px;
+  background: rgba(255,255,255,0.5);
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.ws-nav-btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: #777;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.ws-nav-btn:hover { background: rgba(255,255,255,0.8); color: #333; }
+.ws-nav-btn.active { background: white; color: #7c4dff; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+
+/* ===== 右侧内容 ===== */
+.ws-content {
+  flex: 1;
+  padding: 20px 28px;
+  overflow-y: auto;
+}
+
+.ws-panel { display: none; }
+.ws-panel.active { display: block; }
+
+.ws-panel h2 { font-size: 18px; color: #444; margin-bottom: 4px; }
+.ws-desc { font-size: 12px; color: #aaa; margin-bottom: 16px; }
+
+/* ===== 模板卡片 ===== */
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.template-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.template-card:hover {
+  border-color: #7c4dff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.template-icon { font-size: 40px; display: block; margin-bottom: 8px; }
+.template-name { font-size: 15px; font-weight: 600; color: #444; margin-bottom: 4px; }
+.template-desc { font-size: 11px; color: #aaa; line-height: 1.4; }
+
+/* ===== 素材库 ===== */
+.asset-tags { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+
+.asset-tag {
+  padding: 4px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.asset-tag:hover, .asset-tag.active { border-color: #7c4dff; color: #7c4dff; background: #f8f5ff; }
+
+.asset-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.asset-item {
+  width: 80px; height: 80px;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.asset-item:hover { border-color: #7c4dff; transform: scale(1.05); }
+
+.asset-item img { max-width: 90%; max-height: 90%; border-radius: 8px; object-fit: contain; }
+
+.asset-empty { color: #ccc; font-size: 13px; padding: 40px 0; }
+
+/* ===== 导入区域 ===== */
+.import-zone {
+  border: 2px dashed #ddd;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.4);
+}
+
+.import-zone:hover { border-color: #7c4dff; background: rgba(255,255,255,0.8); }
+.import-zone p { font-size: 13px; color: #aaa; margin-top: 8px; }
+
+.import-preview { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+.import-preview .preview-item {
+  width: 70px; height: 70px;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.import-preview .preview-item img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+
+.preview-remove {
+  position: absolute; top: -6px; right: -6px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #F44336;
+  color: white;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* ===== 自定义表单 ===== */
+.customize-form {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  max-width: 460px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.customize-form label {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+.customize-form label:first-child { margin-top: 0; }
+
+.customize-form input[type="text"],
+.customize-form select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  font-family: inherit;
+  color: #444;
+  transition: border 0.2s;
+}
+
+.customize-form input[type="text"]:focus,
+.customize-form select:focus {
+  outline: none;
+  border-color: #7c4dff;
+}
+
+.customize-form input[type="range"] {
+  width: 100%;
+  accent-color: #7c4dff;
+}
+
+.btn-create {
+  margin-top: 18px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #7c4dff, #e91e63);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.btn-create:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(124,77,255,0.3); }
+
+.create-result {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  display: none;
+}
+
+.create-result.success { display: block; background: #E8F5E9; color: #2E7D32; }
+.create-result.error { display: block; background: #FFEBEE; color: #C62828; }

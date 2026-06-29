@@ -1,0 +1,9 @@
+{
+  "id": "sheep",
+  "name": "羊了个羊",
+  "icon": "🐑",
+  "description": "找出三个相同图案消除！考验你的眼力～",
+  "tags": ["消除", "益智", "闯关"],
+  "version": "1.0.0",
+  "mainFile": "index.html"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "shooter",
+  "name": "打飞机",
+  "icon": "✈️",
+  "description": "驾驶战机消灭敌人！收集道具，挑战高分～",
+  "tags": ["射击", "动作", "闯关"],
+  "version": "1.0.0",
+  "mainFile": "index.html"
+}

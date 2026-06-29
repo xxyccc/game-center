@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧱 俄罗斯方块</title>
+  <link rel="stylesheet" href="../../shared-assets/game-base.css">
+</head>
+<body>
+  <div class="game-header">
+    <button class="btn-back" onclick="goBack()">← 返回大厅</button>
+    <span class="game-title">🧱 俄罗斯方块</span>
+    <span class="game-score-display">⭐ <span id="score">0</span></span>
+  </div>
+
+  <div class="game-container" style="gap: 20px;">
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+    <!-- 预览下一个方块 -->
+    <div style="text-align:center;">
+      <div style="font-size:12px;color:#999;margin-bottom:6px;">下一个</div>
+      <canvas id="previewCanvas" width="120" height="120" style="border-radius:8px;box-shadow:none;background:#FFF8F8;"></canvas>
+    </div>
+  </div>
+
+  <div class="game-hint">← → 移动 | ↑ 旋转 | ↓ 加速下落 | 空格 暂停</div>
+
+  <script src="game.js"></script>
+</body>
+</html>
